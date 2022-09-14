@@ -476,8 +476,55 @@ nav .wrapper {
   font-size: 9px;
 }
 
-
 /* category section end */
+
+/* training section start */
+.training .wrapper{
+  width: 100%;
+  background: rgb(235,235,235);
+}
+
+.training-img{
+  position: relative;
+}
+
+.training .title{
+  padding: 10px .6%;
+  position: absolute;
+  top: 0;
+  left: 12%;
+  color: rgb(140,139,139);
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.training-items{
+  width: 75%;
+  padding: 0 1%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.training-list{
+  padding: 0 7px;
+}
+
+.training-link{
+  padding: 25px 50px 25px 0;
+  color: rgb(115,114,109);
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+.training-link:hover{
+  color: rgb(156,28,33);
+}
+
+/* training section end */
 
 
 
