@@ -117,18 +117,14 @@ header{
   background: rgb(242,242,242);
 }
 
-header .wrapper{
-  width: 100%;
-}
-
-.top-bar,.nav-items,.explore{
-  width: 75%;
-  margin: 0 auto;
-}
-
 .top-bar,.top-left,form,.top-right,.top-right .block1 { 
   display: flex;
   align-items: center;
+}
+
+.top-bar .wrapper{
+  display: flex;
+  justify-content: space-between;
 }
 
 .top-bar form{
@@ -216,7 +212,7 @@ header .wrapper{
 
 .login-link::before {content: "\f234";}
 
-.block2 .cart{
+.block2 .cart {
   padding: 16px 17px;
   color: rgb(0,0,0);
   text-indent: -9999px;
@@ -224,19 +220,76 @@ header .wrapper{
 
 }
 
-.cart::before{
+.cart::before {
   text-indent: 0;
   font-family: "FontAwesome";
   float: left;
 }
 
-.cart-icon::before{
+.cart-icon::before {
   content: "\f07a";
   font-size: 22px;
 }
 
+nav {
+  background: rgb(0,0,0);
+}
 
+nav .wrapper {
+  display: flex;
+  justify-content: space-between; 
+}
 
+.nav-items a,.explore a{
+  color: rgb(255,255,255);
+  transition: all 0.5s ease;
+}
+
+.nav-items{
+  flex-basis: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-list{
+  margin-right: 2%;
+}
+
+.nav-link{
+  padding: 8px 0;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.nav-list:nth-child(6) .nav-link,.nav-list:nth-child(7) .nav-link{
+  color: rgb(235,204,23);
+  transition: all 0.5s ease;
+}
+
+.nav-list:nth-child(7) .nav-link{
+  text-transform: uppercase;
+}
+
+.explore{
+  display: flex;
+  align-items: center;
+}
+
+.explore-link{
+  text-transform: capitalize;
+}
+
+.nav-link::after,.explore-link::after{
+  content: "\f107";
+  margin: 4px 0 0 4px;
+  font-family: "FontAwesome";
+  float: right;
+  font-size: 10px;
+}
+
+.nav-link:hover,.explore-link:hover ,.nav-list:nth-child(6) .nav-link:hover,.nav-list:nth-child(7) .nav-link:hover{
+  color: rgb(255, 0, 0);
+}
 
 /*=================================
   Header styling ends here
