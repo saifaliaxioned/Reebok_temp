@@ -668,6 +668,46 @@ footer .wrapper{
 
 /* footer-main part end */
 
+/* footer-signup part start */
+.signup-part{
+  padding: 26px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: rgb(66,66,61);
+}
+
+.signup-heading{
+  flex-basis: 80%;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.signup-btn{
+  flex-basis: 20%;
+  text-align: right;
+}
+
+.red-txt{
+  color: rgb(197,30,43);
+}
+
+.signup-link{
+  padding: 12px 5%;
+  background: rgb(197,30,43);
+  color: rgb(255, 255, 255);
+}
+
+.signup-link::after{
+  content: "\f0a9";
+  margin-left: 20px;
+  font-family: "FontAwesome";
+  float: right;
+}
+
+/* footer-signup part end */
+
 
 
 
