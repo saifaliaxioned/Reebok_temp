@@ -579,6 +579,28 @@ nav .wrapper {
   footer styling starts here
 =================================*/ 
 
+footer .wrapper{
+  width: 100%;
+}
+
+/* contact part start */
+.contact-details{
+  padding: 0 10%;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgb(50,51,47);
+  color: rgb(255,255,255);
+}
+
+.contact-list{
+  padding: 20px 1%;
+  margin-right: 3%;
+  text-transform: capitalize;
+}
+
+.contact-list:nth-child(2),.contact-list:nth-child(3){ box-shadow: 1px 0 7px -1px rgb(15, 15, 15) inset; }
+
+/* contact part end */
 
 
 
