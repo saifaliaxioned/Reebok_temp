@@ -584,8 +584,12 @@ footer .wrapper{
 }
 
 /* contact part start */
-.contact-details{
+
+.contact-details,.footer-main,.signup-part,.footer-bottom{
   padding: 0 10%;
+}
+
+.contact-details{
   display: flex;
   flex-wrap: wrap;
   background: rgb(50,51,47);
@@ -598,11 +602,71 @@ footer .wrapper{
   text-transform: capitalize;
 }
 
-.contact-list:nth-child(2),.contact-list:nth-child(3){ box-shadow: 1px 0 7px -1px rgb(15, 15, 15) inset; }
+.contact-list:nth-child(2),.contact-list:nth-child(3){ box-shadow: 8px 0 12px -8px rgb(15, 15, 15) inset; }
 
 /* contact part end */
 
+/* footer-main part start */
+.footer-main{
+  padding: 30px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgb(55,56,51);
+}
 
+.footer-list{
+  flex-basis: 20%;
+}
+
+.footer-items{
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sublist-heading{
+  color: rgb(140,139,139);
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer-link{
+  padding: 5px 0;
+  color: rgb(255,255,255);
+  font-size: 13px;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+}
+
+.footer-link:hover{
+  color: rgb(255, 0, 0);
+  text-decoration: underline;
+}
+
+.shares span{
+  padding: 3px 13.1%;
+  border-radius: 3px 3px 0 0;
+  background: rgb(255,255,255);
+  text-align: center;
+}
+
+.share-link{
+  padding: 3px 4.5%;
+  border-radius: 0 0 3px 3px;
+  background: rgb(75,100,176);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.share-link::before{
+  content: "\f082";
+  padding: 7px 5px 0 0;
+  font-family: "FontAwesome";
+  font-size: 18px;
+}
+
+/* footer-main part end */
 
 
 
