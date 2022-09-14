@@ -526,6 +526,48 @@ nav .wrapper {
 
 /* training section end */
 
+/* outlet section start */
+.outlet {
+  padding: 30px 0;
+}
+
+.outlet-heading{
+  padding: 20px 0;
+  color: rgb(140,139,139);
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.outlet-cards{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.outlet-list{
+  flex-basis: 23.8%;
+}
+
+.outlet-link{
+  padding: 18px 2% 12px 10%;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+}
+
+.outlet-link:hover{
+  color: rgb(156,28,33);
+  transform: scale(1.1);
+}
+
+.outlet-caps{
+  text-transform: uppercase;
+}
+
+/* outlet section end */
 
 
 
