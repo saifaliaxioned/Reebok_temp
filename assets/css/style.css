@@ -306,17 +306,69 @@ nav .wrapper {
 }
 
 .slider {
-  width: 100%;
-  padding: 0 12.5%;
-  display: flex;
-  justify-content: space-between;
+  width: 75%;
   position: absolute;
   top: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
   text-transform: uppercase;
 }
 
+.slide-controls{
+  width: 35%;
+  padding: 5px 2%;
+  border-radius: 14px;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  background: rgb(0,0,0,0.5);
+}
+
+.slides{
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.dot { padding: 0 5px;}
+
+
+.slide-title {
+  padding: 2px 0 0 10px; 
+  border-left: 1px dotted rgb(255,255,255);
+  color: rgb(255,255,255);
+  font-size: 13px;
+}
+
+.play-btn a,.slide-link{
+  text-indent: -9999px;
+  color: rgb(255,255,255);
+}
+
+.play-btn a::before{
+  content: "\f04c";
+  padding: 3px 9px 0 10px;
+  text-indent: 0;
+  font-family: "FontAwesome";
+  float: left;
+}
+
+.slide-link{
+  padding: 4px 7px;
+  margin: 2px;
+  border-radius: 50px;
+  background: rgb(152,152,152);
+  font-size: 5px;
+}
+
+.active-slide { background: rgb(255,255,255); }
+
 .slide-content{
   padding: 50px 0;
+  position: absolute;
+  right: 0;
 }
 
 .slide-heading{
@@ -351,9 +403,9 @@ nav .wrapper {
 }
 
 .slide-btn-box{
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
 }
 
 .slide-btn{
@@ -363,9 +415,9 @@ nav .wrapper {
 .btn-link{
   padding: 18px 3%;
   border: 1px solid rgb(255,255,255);
+  display: block;
   background: rgb(0,0,0,0.5);
   color: rgb(255,255,255);
-  display: block;
   font-size: 22px;
   text-align: center;
   transition: all 0.5s ease;
@@ -377,6 +429,21 @@ nav .wrapper {
 }
 
 /* banner end */
+
+/* category section start */
+.categories{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-list{
+  flex-basis: 25%;
+}
+
+.card-body{
+  display: flex;
+}
+/* category section end */
 
 
 
