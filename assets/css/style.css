@@ -1369,3 +1369,50 @@ footer .wrapper{
 
   /* footer end */
 }
+
+/*media query for 375px starts here*/
+@media only screen and (max-width: 375px) {
+
+  /* header start */
+  .top-right {
+    flex-basis: 17%;
+  }
+  /* header end */
+
+  /* banner start */
+  .slide-content {
+    padding: 11px 0 0 0;
+  }
+
+  .slide-title {
+   display: none;
+  }
+  /* banner end */
+
+  /* training section start */
+  .training-list {
+    flex-basis: 50%;
+    text-align: left;
+  }
+  /* training section end */
+
+  /* footer start */
+
+  /* contact-details part start */
+  .contact-list {
+    font-size: 11px;
+  }
+  /* contact-details part end */
+
+  /* footer-main part start */
+  .share-link,.share-link::before,.shares span{
+    font-size: 13px;
+  }
+
+  .share-link {
+    padding: 3px 19px;
+  }
+  /* footer-main part end */
+
+  /* footer end */
+}
