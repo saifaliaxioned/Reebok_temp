@@ -557,15 +557,17 @@ nav .wrapper {
   padding: 0 1%;
   margin: 0 auto;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .training-list{
   padding: 0 7px;
+  text-align: center;
 }
 
 .training-link{
-  padding: 25px 50px 25px 0;
+  padding: 25px 0;
   color: rgb(115,114,109);
   font-size: 18px;
   font-weight: bold;
@@ -984,6 +986,131 @@ footer .wrapper{
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
+  /* header start */
+  .nav-items {
+    flex-basis: 90%;
+    display: flex;
+    align-items: center;
+  }
 
+  .nav-link,.explore-link{
+    font-size: 13px;
+  }
+
+  .top-bar form {
+    flex-basis: 54%;
+  }
+
+  .shipping {
+    display: none;
+  }
+  /* header end */
+
+  /* banner section start */
+  .banner-img{
+    height: 55vh;
+  }
+
+  .banner-img img{
+    height: 100%;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .slide-content{
+    text-align: center;
+  }
+
+  .slide-content,.slide-controls{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .slide-controls{
+    width: auto;
+  }
+
+  .slide-heading{
+    font-size: 24px;
+  }
+
+  .slide-sub-heading{
+    font-size: 14px;
+    letter-spacing: 1.1px;
+  }
+
+  .slide-desc{
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .slide-btn-box {
+    display: block;
+    text-align: center;
+  }
+
+  .slide-btn{ 
+    font-size: 15px;
+  }
+
+  .btn-link {
+    padding: 12px 13px;
+    font-size: 14px;
+  }
+  /* banner section end */
+
+  /* category section start */
+  .category-list {
+    padding: 0;
+    margin-top: 12px;
+    flex-basis: 33%;
+  }
+  /* cotegory section end */
+
+  /* training section start */
+  .training-list{
+    text-align: center;
+  }
+  
+  .training-link{
+    font-size: 14px;
+  }
+  /* training section end */
+
+
+  /* contact-details part start */
+  .contact-list {
+    flex-basis: 50%;
+    font-size: 15px;
+  }
+
+  .contact-list:nth-child(2),.contact-list:nth-child(3){
+    box-shadow: none;
+  }
+
+  /* contact-details part end */
+
+  /* footer-main part start */
+  .facebook-share{
+    margin-left: 11%;
+  }
+  /* footer-main part end */
+
+  /* signup-part start */
+  .signup-heading,.signup-btn{
+    flex-basis: 100%;
+  }
+
+  .signup-btn {
+    padding: 20px 0 0 0;
+    text-align: left;
+  }
+
+  .signup-link {
+    padding: 8px 2%;
+  }
+  /* signup-part end */
 
 }  
