@@ -294,7 +294,7 @@ nav .wrapper {
 .hamburger {
   position: absolute;
   top: 10px;
-  right: 50px;
+  right: 5%;
   width: 30px;
   height: 30px;
   display: none; 
@@ -1051,10 +1051,6 @@ footer .wrapper{
     text-align: center;
   }
 
-  .slide-btn{ 
-    font-size: 15px;
-  }
-
   .btn-link {
     padding: 12px 13px;
     font-size: 14px;
@@ -1114,3 +1110,138 @@ footer .wrapper{
   /* signup-part end */
 
 }  
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  /* header start */
+  nav .wrapper{
+    flex-direction: column;
+  }
+
+  .top-right .block1,.top-bar form{
+    display: none;
+  }
+
+  .block2 .cart{
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .top-right {
+    flex-basis: 6%;
+  }
+  
+  .cart-icon::before {
+    content: "\f07a";
+    font-size: 29px;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 3;
+  }
+
+  .hamburger:hover + nav {
+    transform: translateX(0);
+  }
+
+  .bar:hover{
+    background: rgb(255,255,255);
+  }
+
+  nav {
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+  }
+
+  .nav-items {
+    margin: 60px 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-link ,.explore-link{
+    padding: 24px 0;
+    display: block;
+    font-size: 20px;
+  }
+
+  .bar::before {
+    top: -10px;
+  }
+
+  .bar::after {
+    top: 10px;
+  }
+
+  .explore {
+    justify-content: center;
+  }
+  /* header end */
+
+  /* banner section start */
+  .slide-heading{
+    font-size: 20px;
+  }
+
+  .slide-sub-heading{
+    font-size: 11px;
+    letter-spacing: 1.1px;
+  }
+
+  .slide-desc{
+    font-size: 10px;
+  }
+
+  .btn-link {
+    font-size: 10px;
+  }
+  /* banner section end */
+
+  /* category section start */
+  .category-list {
+    flex-basis: 50%;
+  }
+
+  .categories {
+    padding: 0px 0 20px 0;
+  }
+
+  .category-list {
+    margin-top: 36px;
+  }
+  /* category section end */
+
+  /* training section start */
+  .training-items{
+    justify-content: flex-start;
+  }
+
+  .training-list {
+    flex-basis: 33%;
+  }
+  /* training section wnd */
+
+  /* outlet section start */
+  .outlet-list {
+    flex-basis: 47.8%;
+  }
+  /* outlet section end */
+
+  /* footer start */
+  .contact-list {
+    flex-basis: 100%;
+    font-size: 16px;
+  }
+
+  /* footer main part start */
+  .footer-list {
+    flex-basis: 33%;
+  }
+  /* footer main part end */
+  /* footer end */
+}
