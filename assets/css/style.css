@@ -174,7 +174,9 @@ header{
 
 .shipping a{ 
   color: rgb(0,0,0);
+  font-size: 14px;
   font-weight: bold;
+  transition: all 0.5s ease;
 }
 
 .top-right {
@@ -186,7 +188,6 @@ header{
   padding: 20px 4%;
   flex-basis: 70%;
   justify-content: space-between;
-  /* background:linear-gradient(103deg,rgb(0,0,0,0.1),rgb(255,255,255),rgb(255, 255, 255),rgb(255,255,255),rgb(255,255,255),rgb(255,255,255)); */
   box-shadow: 19px 0 13px -12px rgba(189, 186, 186, 0.4) inset;
   font-size: 12px;
 }
@@ -199,6 +200,7 @@ header{
 .wishlist-link,.login-link {
   color: rgb(0,0,0);
   text-transform: capitalize;
+  transition: all 0.5s ease;
 }
 
 .wishlist-link::before,.login-link::before {
@@ -217,6 +219,7 @@ header{
   color: rgb(0,0,0);
   text-indent: -9999px;
   box-shadow: 19px 0 13px -12px rgba(189, 186, 186, 0.4) inset;
+  transition: all 0.5s ease;
 
 }
 
@@ -229,6 +232,15 @@ header{
 .cart-icon::before {
   content: "\f07a";
   font-size: 22px;
+}
+
+.wishlist-link:hover ,.login-link:hover{
+  color: rgb(197,30,43);
+  transform: scale(1.2);
+}
+
+.cart:hover,.shipping a:hover{
+  color: rgb(197,30,43);
 }
 
 nav {
@@ -289,6 +301,59 @@ nav .wrapper {
 
 .nav-link:hover,.explore-link:hover ,.nav-list:nth-child(6) .nav-link:hover,.nav-list:nth-child(7) .nav-link:hover{
   color: rgb(255, 0, 0);
+}
+
+.hamburger {
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  width: 30px;
+  height: 30px;
+  display: none; 
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: inline-block;
+  background-color: #000;
+  border-radius: 4px;
+  text-indent: -99999px;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  background-color: inherit;
+  transition: all 0.3s;
+}
+
+.bar::before {
+  top: -13px;
+}
+
+.bar::after {
+  top: 13px;
+}
+
+.hamburger:hover .bar {
+  transform: rotate(45deg);
+}
+.hamburger:hover .bar::before {
+  display: none;
+}
+.hamburger:hover .bar::after {
+  transform: translateY(-13px) rotate(90deg);
 }
 
 /*=================================
@@ -504,15 +569,17 @@ nav .wrapper {
   padding: 0 1%;
   margin: 0 auto;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .training-list{
   padding: 0 7px;
+  text-align: center;
 }
 
 .training-link{
-  padding: 25px 50px 25px 0;
+  padding: 25px 0;
   color: rgb(115,114,109);
   font-size: 18px;
   font-weight: bold;
@@ -644,15 +711,25 @@ footer .wrapper{
   text-decoration: underline;
 }
 
+.facebook-share{
+  width: 50%;
+}
+
+.shares{
+    margin-top: 12px;
+}
+
 .shares span{
   padding: 3px 13.1%;
   border-radius: 3px 3px 0 0;
+  display: block;
   background: rgb(255,255,255);
   text-align: center;
 }
 
 .share-link{
   padding: 3px 4.5%;
+  display: block;
   border-radius: 0 0 3px 3px;
   background: rgb(75,100,176);
   color: rgb(255, 255, 255);
@@ -680,7 +757,9 @@ footer .wrapper{
 
 .signup-heading{
   flex-basis: 80%;
+  color: rgb(255, 255, 255);
   font-size: 20px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -694,19 +773,116 @@ footer .wrapper{
 }
 
 .signup-link{
-  padding: 12px 5%;
+  padding: 8px 5%;
+  border-radius: 5px;
   background: rgb(197,30,43);
   color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+}
+
+.signup-link:hover{
+    color: rgb(197,30,43);
+    background: rgb(255, 255, 255);
 }
 
 .signup-link::after{
-  content: "\f0a9";
-  margin-left: 20px;
+  content: "\f138";
+  margin-left: 50px;
   font-family: "FontAwesome";
+  font-size: 20px;
   float: right;
 }
 
 /* footer-signup part end */
+
+/* footer bottom part start */
+.footer-bottom{
+  background: rgb(55,56,51);
+}
+
+.payment-items{
+  padding: 40px 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.payment-cards{
+    margin-right: 2%;
+}
+
+.copyright-part{
+    padding: 32px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(110,115,121);
+}
+
+.chatbox{
+  width: 7%;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 15px;
+  right: 40px;
+}
+
+.scrollTop-link,.chat-link{
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 11px;
+  transition: all 0.5s ease;
+}
+
+.scrollTop-link{
+  padding: 20px 10px 10px 10px;
+  border-radius: 4px;
+  background: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+.scrollTop-link::after{
+  content: "\f106";
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  font-family: "FontAwesome";
+}
+
+.chat{
+  margin-left: 10px;
+}
+
+.chat-link{
+  padding: 10px;
+  font-size: 14px;
+}
+
+.chat-link::before{
+  content: "\f075";
+  position: absolute;
+  z-index: -1;
+  top: -6px;
+  left: 0;
+  color: rgb(0, 0, 0);
+  font-family: "FontAwesome";
+  font-size: 50px;
+}
+
+.scrollTop-link:hover{
+  color: rgb(0, 0, 0);
+  background: rgb(255,255,255);
+}
+
+.chat-link:hover{
+  color: rgb(197,30,43);
+}
+
+/* footer bottom part end */
 
 
 
@@ -716,9 +892,605 @@ footer .wrapper{
 =================================*/ 
 
 /*media query starts*/
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+
+  /* topbar start */
+  .top-left{
+    flex-basis: 74%;
+  }
+
+  .top-right{
+    flex-basis: 26%;
+  }
+
+  .input-control input {
+    padding: 8.5px 0 8.5px 4px;
+  }
+
+  .shipping a{
+    font-size: 13px;
+  }
+
+  .top-right .block1 {
+    padding: 8px 4%;
+    flex-basis: 70%;
+    flex-direction: column-reverse;
+  }
+
+  .wishlist{
+    padding: 5px;
+  }
+  /* topbar end */
+
+  /* banner start */
+  .slide-heading{
+    font-size: 34px;
+  }
+
+  .slide-content{
+   text-align: right;
+   padding: 24px 0;
+  }
+
+  .slide-sub-heading{
+    letter-spacing: 2.2px;
+  }
+
+  .btn-link{
+    padding: 12px 0%;
+    font-size: 14px;
+  }
+
+  .slide-desc{
+    font-size: 15px;
+  }
+  /* banner end */
+
+  /* category section start */
+  .category-list {
+    padding: 14px;
+    flex-basis: 33%;
+  }
+  /* category section end */
+
+  /* training section start */
+  .training-items {
+    width: 75%;
+    padding: 0;
+  }
+
+  .training-list{
+    flex-basis: 14%
+  }
+
+  .training-link {
+    padding: 25px 0;
+  }
+  /* training section end */
+
+  /* outlet section start */
+
+  .outlet-list {
+    flex-basis: 31.8%;
+  }
+  /* outlet section end */
+
+  /* footer start */
+
+  /* contact-details part start */
+  .contact-list {
+    margin-right: 0;
+    font-size: 13px;
+  }
+  /* contact-details part end */
+
+  /* payment-part start */
+  .payment-cards {
+    margin: 1.5% 2% 0 0;
+    flex-basis: 20%;
+  }
+  /* payment-part end */
+
+  /* footer end */
+
+}  
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
+  /* header start */
+  .nav-items {
+    flex-basis: 90%;
+    display: flex;
+    align-items: center;
+  }
 
+  .nav-link,.explore-link{
+    font-size: 13px;
+  }
+
+  .top-bar form {
+    flex-basis: 54%;
+  }
+
+  .shipping {
+    display: none;
+  }
+  /* header end */
+
+  /* banner section start */
+  .banner-img{
+    height: 55vh;
+  }
+
+  .banner-img img{
+    height: 100%;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .slide-content{
+    text-align: center;
+  }
+
+  .slide-content,.slide-controls{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .slide-controls{
+    width: auto;
+  }
+
+  .slide-heading{
+    font-size: 24px;
+  }
+
+  .slide-sub-heading{
+    font-size: 14px;
+    letter-spacing: 1.1px;
+  }
+
+  .slide-desc{
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .slide-btn-box {
+    display: block;
+    text-align: center;
+  }
+
+  .btn-link {
+    padding: 12px 13px;
+    font-size: 14px;
+  }
+  /* banner section end */
+
+  /* category section start */
+  .category-list {
+    padding: 0;
+    margin-top: 12px;
+    flex-basis: 33%;
+  }
+  /* cotegory section end */
+
+  /* training section start */
+  .training-list{
+    text-align: center;
+  }
+  
+  .training-link{
+    font-size: 14px;
+  }
+  /* training section end */
+
+
+  /* contact-details part start */
+  .contact-list {
+    flex-basis: 50%;
+    font-size: 15px;
+  }
+
+  .contact-list:nth-child(2),.contact-list:nth-child(3){
+    box-shadow: none;
+  }
+
+  /* contact-details part end */
+
+  /* footer-main part start */
+  .facebook-share{
+    margin-left: 11%;
+  }
+  /* footer-main part end */
+
+  /* signup-part start */
+  .signup-heading,.signup-btn{
+    flex-basis: 100%;
+  }
+
+  .signup-btn {
+    padding: 20px 0 0 0;
+    text-align: left;
+  }
+
+  .signup-link {
+    padding: 8px 2%;
+  }
+  /* signup-part end */
 
 }  
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  /* header start */
+  nav .wrapper{
+    flex-direction: column;
+  }
+
+  .top-right .block1,.top-bar form{
+    display: none;
+  }
+
+  .block2 .cart{
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .top-right {
+    flex-basis: 6%;
+  }
+  
+  .cart-icon::before {
+    content: "\f07a";
+    font-size: 29px;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 3;
+  }
+
+  .hamburger:hover .bar::after {
+    transform: translateY(-9px) rotate(90deg);
+  }
+
+  .hamburger:hover + nav {
+    transform: translateX(0);
+  }
+
+  .bar:hover{
+    background: rgb(255,255,255);
+  }
+
+  nav {
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+  }
+
+  .nav-items {
+    margin: 60px 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-link ,.explore-link{
+    padding: 24px 0;
+    display: block;
+    font-size: 20px;
+  }
+
+  .bar::before {
+    top: -10px;
+  }
+
+  .bar::after {
+    top: 10px;
+  }
+
+  .explore {
+    justify-content: center;
+  }
+  /* header end */
+
+  /* banner section start */
+  .slide-heading{
+    font-size: 20px;
+  }
+
+  .slide-sub-heading{
+    font-size: 11px;
+    letter-spacing: 1.1px;
+  }
+
+  .slide-desc{
+    font-size: 10px;
+  }
+
+  .btn-link {
+    font-size: 10px;
+  }
+  /* banner section end */
+
+  /* category section start */
+  .category-list {
+    flex-basis: 50%;
+  }
+
+  .categories {
+    padding: 0px 0 20px 0;
+  }
+
+  .category-list {
+    margin-top: 36px;
+  }
+  /* category section end */
+
+  /* training section start */
+  .training-items{
+    justify-content: flex-start;
+  }
+
+  .training-list {
+    flex-basis: 33%;
+  }
+  /* training section wnd */
+
+  /* outlet section start */
+  .outlet-list {
+    flex-basis: 47.8%;
+  }
+  /* outlet section end */
+
+  /* footer start */
+  .contact-list {
+    flex-basis: 100%;
+    font-size: 16px;
+  }
+
+  /* footer main part start */
+  .footer-list {
+    flex-basis: 33%;
+  }
+  /* footer main part end */
+
+  /* footer-bottom part start */
+  .copyright{
+    font-size: 16px;
+  }
+
+  .copyright-part {
+    flex-direction: column-reverse;
+  }
+
+  .copyright-img{
+    padding-bottom: 5px;
+  }
+  /* footer-bottom part end */
+
+  /* footer end */
+}
+
+/*media query for 480px starts here*/
+@media only screen and (max-width: 480px) {
+  /* header start */
+  .top-right {
+    flex-basis: 14%;
+  }
+
+  .cart-icon::before {
+    content: "\f07a";
+    font-size: 22px;
+  }
+
+  .bar::before {
+    top: -9px;
+  }
+
+  .bar::after {
+    top: 9px;
+  }
+  /* header end */
+
+  /* banner start */
+  .slide-btn-box {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide-btn{
+    padding-top: 7px;
+  }
+  /* banner end */
+
+  /* category section start */
+  .categories {
+    justify-content: center;
+  }
+
+  .card-heading {
+    text-align: center;
+    padding: 0 0 20px 0;
+  }
+
+  .category-list {
+    flex-basis: 70%;
+  }
+
+  .card-link {
+    font-size: 14px;
+  }
+
+  .card-link::before {
+    font-size: 8px;
+  }
+  /* category section end */
+
+  /* outlet section start */
+  .outlet-list {
+    flex-basis: 100%;
+  }
+  /* outlet section end */
+
+  /* footer start */
+
+  /* contact-details part start */
+  .contact-list {
+    font-size: 14px;
+  }
+  /* contact-details part end */
+
+  /* footer-main part start */
+  .footer-list {
+    flex-basis: 50%;
+  }
+
+  .facebook-share {
+    margin-left: 0;
+    width: 66%;
+  }
+
+  .share-link,.share span{
+    font-size: 16px;
+  }
+
+  .share-link {
+    padding: 3px 28px;
+  }
+  /* footer-main part end */
+
+  /* footer-bottom part start */
+  .copyright{
+    font-size: 10px;
+  }
+
+  .payment-items {
+    padding: 40px 0;
+    margin-bottom: 0;
+  }
+
+  .payment-cards {
+    flex-basis: 23%;
+  }
+  /* footer-bottom part end */
+
+  /* footer end */
+}
+
+/*media query for 375px starts here*/
+@media only screen and (max-width: 375px) {
+
+  /* header start */
+  .top-right {
+    flex-basis: 17%;
+  }
+  /* header end */
+
+  /* banner start */
+  .slide-content {
+    padding: 11px 0 0 0;
+  }
+
+  .slide-title {
+   display: none;
+  }
+  /* banner end */
+
+  /* training section start */
+  .training-list {
+    flex-basis: 50%;
+    text-align: left;
+  }
+  /* training section end */
+
+  /* footer start */
+
+  /* contact-details part start */
+  .contact-list {
+    font-size: 11px;
+  }
+  /* contact-details part end */
+
+  /* footer-main part start */
+  .share-link,.share-link::before,.shares span{
+    font-size: 13px;
+  }
+
+  .share-link {
+    padding: 3px 19px;
+  }
+  /* footer-main part end */
+
+  /* chatbox part start */
+  .chatbox {
+    flex-direction: column;
+  }
+
+  .scrollTop-btn {
+    margin-bottom: 12px;
+    margin-left: 3px;
+  }
+
+  .chat {
+    margin-left: 0;
+  }
+  /* chatbox part end */
+
+  /* footer end */
+}
+
+/*media query for 320px starts here*/
+@media only screen and (max-width: 320px) {
+
+  /* category section start */
+  .category-list {
+    flex-basis: 76%;
+  }
+  /* category section end */
+
+  /* outlet section start */
+  .outlet {
+    text-align: center;
+  }
+
+  .outlet-heading {
+    font-size: 18px;
+  }
+
+
+.outlet-link {
+  padding: 18px 0;
+}
+  /* outlet section end */
+
+  /* signup part start */
+  .signup-link::after {
+    margin-left: 22px;
+  }
+
+  .signup-link {
+    font-size: 14px;
+  }
+
+  .signup-link::after{
+    font-size: 15px;
+  }
+
+  .signup-heading {
+    font-size: 16px;
+  }
+  /* signup part end */
+
+  /* copyright part */
+  .copyright {
+    font-size: 8px;
+  }
+  /* copyright end */
+}
+
