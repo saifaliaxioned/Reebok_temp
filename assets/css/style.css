@@ -1427,5 +1427,20 @@ footer .wrapper{
   }
   /* footer-main part end */
 
+  /* chatbox part start */
+  .chatbox {
+    flex-direction: column;
+  }
+
+  .scrollTop-btn {
+    margin-bottom: 12px;
+    margin-left: 3px;
+  }
+
+  .chat {
+    margin-left: 0;
+  }
+  /* chatbox part end */
+
   /* footer end */
 }
