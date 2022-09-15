@@ -723,6 +723,93 @@ footer .wrapper{
 
 /* footer-signup part end */
 
+/* footer bottom part start */
+.footer-bottom{
+  background: rgb(55,56,51);
+}
+
+.payment-items{
+  padding: 40px 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.payment-cards{
+    margin-right: 2%;
+}
+
+.copyright-part{
+    padding: 32px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(110,115,121);
+}
+
+.chatbox{
+  width: 7%;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 15px;
+  right: 40px;
+}
+
+.scrollTop-link,.chat-link{
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 11px;
+  transition: all 0.5s ease;
+}
+
+.scrollTop-link{
+  padding: 20px 10px 10px 10px;
+  border-radius: 4px;
+  background: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+.scrollTop-link::after{
+  content: "\f106";
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  font-family: "FontAwesome";
+}
+
+.chat{
+  margin-left: 10px;
+}
+
+.chat-link{
+  padding: 10px;
+  font-size: 14px;
+}
+
+.chat-link::before{
+  content: "\f075";
+  position: absolute;
+  z-index: -1;
+  top: -6px;
+  left: 0;
+  color: rgb(0, 0, 0);
+  font-family: "FontAwesome";
+  font-size: 50px;
+}
+
+.scrollTop-link:hover{
+  color: rgb(0, 0, 0);
+  background: rgb(255,255,255);
+}
+
+.chat-link:hover{
+  color: rgb(197,30,43);
+}
+
+/* footer bottom part end */
+
 
 
 
