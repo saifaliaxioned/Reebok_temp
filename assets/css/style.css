@@ -186,7 +186,6 @@ header{
   padding: 20px 4%;
   flex-basis: 70%;
   justify-content: space-between;
-  /* background:linear-gradient(103deg,rgb(0,0,0,0.1),rgb(255,255,255),rgb(255, 255, 255),rgb(255,255,255),rgb(255,255,255),rgb(255,255,255)); */
   box-shadow: 19px 0 13px -12px rgba(189, 186, 186, 0.4) inset;
   font-size: 12px;
 }
@@ -1141,6 +1140,10 @@ footer .wrapper{
     z-index: 3;
   }
 
+  .hamburger:hover .bar::after {
+    transform: translateY(-9px) rotate(90deg);
+  }
+
   .hamburger:hover + nav {
     transform: translateX(0);
   }
@@ -1243,5 +1246,126 @@ footer .wrapper{
     flex-basis: 33%;
   }
   /* footer main part end */
+
+  /* footer-bottom part start */
+  .copyright{
+    font-size: 16px;
+  }
+
+  .copyright-part {
+    flex-direction: column-reverse;
+  }
+
+  .copyright-img{
+    padding-bottom: 5px;
+  }
+  /* footer-bottom part end */
+
+  /* footer end */
+}
+
+/*media query for 480px starts here*/
+@media only screen and (max-width: 480px) {
+  /* header start */
+  .top-right {
+    flex-basis: 14%;
+  }
+
+  .cart-icon::before {
+    content: "\f07a";
+    font-size: 22px;
+  }
+
+  .bar::before {
+    top: -9px;
+  }
+
+  .bar::after {
+    top: 9px;
+  }
+  /* header end */
+
+  /* banner start */
+  .slide-btn-box {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide-btn{
+    padding-top: 7px;
+  }
+  /* banner end */
+
+  /* category section start */
+  .categories {
+    justify-content: center;
+  }
+
+  .card-heading {
+    text-align: center;
+    padding: 0 0 20px 0;
+  }
+
+  .category-list {
+    flex-basis: 70%;
+  }
+
+  .card-link {
+    font-size: 14px;
+  }
+
+  .card-link::before {
+    font-size: 8px;
+  }
+  /* category section end */
+
+  /* outlet section start */
+  .outlet-list {
+    flex-basis: 100%;
+  }
+  /* outlet section end */
+
+  /* footer start */
+
+  /* contact-details part start */
+  .contact-list {
+    font-size: 14px;
+  }
+  /* contact-details part end */
+
+  /* footer-main part start */
+  .footer-list {
+    flex-basis: 50%;
+  }
+
+  .facebook-share {
+    margin-left: 0;
+    width: 66%;
+  }
+
+  .share-link,.share span{
+    font-size: 16px;
+  }
+
+  .share-link {
+    padding: 3px 28px;
+  }
+  /* footer-main part end */
+
+  /* footer-bottom part start */
+  .copyright{
+    font-size: 10px;
+  }
+
+  .payment-items {
+    padding: 40px 0;
+    margin-bottom: 0;
+  }
+
+  .payment-cards {
+    flex-basis: 23%;
+  }
+  /* footer-bottom part end */
+
   /* footer end */
 }
