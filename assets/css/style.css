@@ -1444,3 +1444,53 @@ footer .wrapper{
 
   /* footer end */
 }
+
+/*media query for 320px starts here*/
+@media only screen and (max-width: 320px) {
+
+  /* category section start */
+  .category-list {
+    flex-basis: 76%;
+  }
+  /* category section end */
+
+  /* outlet section start */
+  .outlet {
+    text-align: center;
+  }
+
+  .outlet-heading {
+    font-size: 18px;
+  }
+
+
+.outlet-link {
+  padding: 18px 0;
+}
+  /* outlet section end */
+
+  /* signup part start */
+  .signup-link::after {
+    margin-left: 22px;
+  }
+
+  .signup-link {
+    font-size: 14px;
+  }
+
+  .signup-link::after{
+    font-size: 15px;
+  }
+
+  .signup-heading {
+    font-size: 16px;
+  }
+  /* signup part end */
+
+  /* copyright part */
+  .copyright {
+    font-size: 8px;
+  }
+  /* copyright end */
+}
+
