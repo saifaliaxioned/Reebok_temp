@@ -705,6 +705,7 @@ footer .wrapper{
   background: rgb(197,30,43);
   color: rgb(255, 255, 255);
   font-weight: bold;
+  text-transform: capitalize;
   transition: all 0.5s ease;
 }
 
@@ -818,6 +819,102 @@ footer .wrapper{
 =================================*/ 
 
 /*media query starts*/
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+
+  /* topbar start */
+  .top-left{
+    flex-basis: 74%;
+  }
+
+  .top-right{
+    flex-basis: 26%;
+  }
+
+  .input-control input {
+    padding: 8.5px 0 8.5px 4px;
+  }
+
+  .shipping a{
+    font-size: 13px;
+  }
+
+  .top-right .block1 {
+    padding: 8px 4%;
+    flex-basis: 70%;
+    flex-direction: column-reverse;
+  }
+
+  .wishlist{
+    padding: 5px;
+  }
+  /* topbar end */
+
+  /* banner start */
+  .slide-heading{
+    font-size: 34px;
+  }
+
+  .slide-content{
+   text-align: right;
+   padding: 24px 0;
+  }
+
+  .slide-sub-heading{
+    letter-spacing: 2.2px;
+  }
+
+  .btn-link{
+    padding: 12px 0%;
+    font-size: 14px;
+  }
+
+  .slide-desc{
+    font-size: 15px;
+  }
+  /* banner end */
+
+  /* category section start */
+  .category-list {
+    padding: 14px;
+    flex-basis: 33%;
+  }
+  /* category section end */
+
+  /* training section start */
+  .training-items {
+    width: 75%;
+    padding: 0;
+  }
+
+  .training-list{
+    flex-basis: 14%
+  }
+
+  .training-link {
+    padding: 25px 0;
+  }
+  /* training section end */
+
+  /* outlet section start */
+
+  .outlet-list {
+    flex-basis: 31.8%;
+  }
+  /* outlet section end */
+
+  /* footer start */
+
+  /* contact-details part start */
+  .contact-list {
+    margin-right: 0;
+    font-size: 13px;
+  }
+  /* contact-details part end */
+
+  /* footer end */
+
+}  
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
