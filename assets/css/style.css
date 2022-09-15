@@ -174,7 +174,9 @@ header{
 
 .shipping a{ 
   color: rgb(0,0,0);
+  font-size: 14px;
   font-weight: bold;
+  transition: all 0.5s ease;
 }
 
 .top-right {
@@ -198,6 +200,7 @@ header{
 .wishlist-link,.login-link {
   color: rgb(0,0,0);
   text-transform: capitalize;
+  transition: all 0.5s ease;
 }
 
 .wishlist-link::before,.login-link::before {
@@ -216,6 +219,7 @@ header{
   color: rgb(0,0,0);
   text-indent: -9999px;
   box-shadow: 19px 0 13px -12px rgba(189, 186, 186, 0.4) inset;
+  transition: all 0.5s ease;
 
 }
 
@@ -228,6 +232,15 @@ header{
 .cart-icon::before {
   content: "\f07a";
   font-size: 22px;
+}
+
+.wishlist-link:hover ,.login-link:hover{
+  color: rgb(197,30,43);
+  transform: scale(1.2);
+}
+
+.cart:hover,.shipping a:hover{
+  color: rgb(197,30,43);
 }
 
 nav {
