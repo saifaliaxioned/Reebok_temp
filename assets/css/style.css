@@ -1413,11 +1413,15 @@ footer .wrapper{
   /* header end */
 
   /* banner section start */
-  .slide-heading{
+  .banner-img {
+    height: 45vh;
+  }
+
+  .slide-heading {
     font-size: 20px;
   }
 
-  .slide-sub-heading{
+  .slide-sub-heading {
     font-size: 11px;
     letter-spacing: 1.1px;
   }
@@ -1523,6 +1527,10 @@ footer .wrapper{
   /* header end */
 
   /* banner start */
+  .banner-img {
+    height: 55vh;
+    }
+
   .slide-btn-box {
     padding: 0;
     display: -webkit-box;
