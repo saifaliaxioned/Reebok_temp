@@ -1696,6 +1696,12 @@ footer .wrapper{
 /*media query for 320px starts here*/
 @media only screen and (max-width: 320px) {
 
+  /* banner section start */
+  .slide-heading {
+    font-size: 14px;
+  }
+  /* banner section end */
+
   /* category section start */
   .category-list {
     -ms-flex-preferred-size: 76%;
